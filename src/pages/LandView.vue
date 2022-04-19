@@ -82,4 +82,37 @@ export default {};
   background: var(--light-purple);
   clip-path: ellipse(80% 90% at 100% 52%);
 }
+@media only screen and (max-width: 1407px) {
+  .col-1 h1 {
+    padding: 0 0 50px 70px;
+    font-size: 700%;
+  }
+  .col-1 a {
+    left: 16%;
+  }
+}
+
+@media only screen and (max-width: 1121px) {
+  .col-1 h1 {
+    padding: 0 0 50px 50px;
+    font-size: 500%;
+  }
+  .col-1 a {
+    left: 9%;
+  }
+}
+@media only screen and (max-width: 807px) {
+  .row img {
+    display: none;
+  }
+  .col-2 {
+    display: none;
+  }
+  .col-1 a {
+    left: 6%;
+  }
+  .row {
+    background: linear-gradient(129deg, #fff 63%, #a772f3 63%);
+  }
+}
 </style>
