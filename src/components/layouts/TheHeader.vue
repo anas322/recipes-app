@@ -29,6 +29,10 @@ header {
   box-shadow: 10px 10px 152px var(--grey);
   background: #fcfcfc;
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 ul {
