@@ -88,7 +88,8 @@ article:hover {
 ul {
   list-style-type: none;
   display: flex;
-  column-gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem 0.5rem;
 }
 ul li {
   padding: 5px 15px;
@@ -100,7 +101,16 @@ ul li {
   letter-spacing: 1px;
 }
 
-/* @media only screen and (min-width:) {
-  
-} */
+@media only screen and (max-width: 1200px) {
+  article {
+    flex: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  article {
+    flex: 100%;
+    max-width: 80%;
+  }
+}
 </style>
