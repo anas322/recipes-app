@@ -10,10 +10,16 @@
     </div>
     <div class="arrow"></div>
   </section>
+  <dishes-list></dishes-list>
 </template>
 
 <script>
-export default {};
+import DishesList from "../components/dishes/DishesList.vue";
+export default {
+  components: {
+    DishesList,
+  },
+};
 </script>
 
 <style>

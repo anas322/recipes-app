@@ -1,20 +1,14 @@
 <template>
   <the-header></the-header>
-  <land-view></land-view>
-  <dishes-list></dishes-list>
   <router-view />
 </template>
 
 <script>
 import TheHeader from "./components/layouts/TheHeader.vue";
-import LandView from "./pages/LandView.vue";
-import DishesList from "./pages/DishesList.vue";
 
 export default {
   components: {
     TheHeader,
-    LandView,
-    DishesList,
   },
 };
 </script>
@@ -40,5 +34,8 @@ export default {
 }
 section {
   margin-bottom: 1rem;
+}
+html {
+  scroll-behavior: smooth;
 }
 </style>

@@ -3,13 +3,15 @@
     <nav>
       <ul>
         <li>
-          <base-button link to="#"
+          <base-button link to="/"
             ><img
               src="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-kitchen-utensils-kitchen-cooking-becris-lineal-color-becris-1.png"
           /></base-button>
         </li>
         <div>
-          <li><base-button link to="#">Dishes</base-button></li>
+          <li>
+            <base-button link to="/dishes">Dishes</base-button>
+          </li>
           <li>
             <base-button link to="#" mode="solid">Create Dish</base-button>
           </li>

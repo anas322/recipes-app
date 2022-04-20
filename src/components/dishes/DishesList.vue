@@ -1,10 +1,10 @@
 <template>
-  <section>
+  <section id="dishes">
     <h1><strong>Dishes List </strong></h1>
     <div class="container">
       <article v-for="n in 9" :key="n">
         <header>
-          <img src="../assets/dish2.png" alt="food" style="width: 100%" />
+          <img src="../../assets/dish2.png" alt="food" style="width: 100%" />
         </header>
         <div class="body">
           <h2>Post One</h2>

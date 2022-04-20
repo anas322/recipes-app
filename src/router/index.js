@@ -1,6 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const routes = [];
+// Pages
+import LandView from "../pages/LandView.vue";
+import DishDetails from "../pages/DishDetails.vue";
+
+const routes = [
+  { path: "/", redirect: "/dishes" },
+
+  { path: "/dishes", component: LandView },
+
+  { path: "/dishes/:id", component: DishDetails },
+];
 
 const router = createRouter({
   history: createWebHistory(),
