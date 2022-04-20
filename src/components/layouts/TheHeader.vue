@@ -13,7 +13,9 @@
             <base-button link to="/dishes">Dishes</base-button>
           </li>
           <li>
-            <base-button link to="#" mode="solid">Create Dish</base-button>
+            <base-button link to="/addDish" mode="solid"
+              >Create Dish</base-button
+            >
           </li>
         </div>
       </ul>

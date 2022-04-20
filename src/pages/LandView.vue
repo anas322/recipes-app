@@ -4,7 +4,7 @@
       <img class="dish" src="../assets/dish1.png" alt="food dish" />
       <div class="col col-1">
         <h1>Make your today's <span>meal !</span></h1>
-        <base-button link to="#" mode="flat"> Create Dish </base-button>
+        <base-button link to="/addDish" mode="flat"> Create Dish </base-button>
       </div>
       <div class="col col-2"></div>
     </div>
