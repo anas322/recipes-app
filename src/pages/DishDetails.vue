@@ -5,21 +5,37 @@
         <img src="../assets/details/pic.jpg" alt="food image" />
       </div>
       <article>
-        <h1>Food Title</h1>
-        <span>American</span>
+        <h1>{{ recipe.name }}</h1>
+        <span>{{ recipe.cuisine }}</span>
         <ul>
-          <li>step 1</li>
-          <li>step 1</li>
-          <li>step 1</li>
+          <li v-for="(r, index) in recipe.steps" :key="index">{{ r }}</li>
         </ul>
-        <time>30 min</time>
+        <time>{{ recipe.time }} min</time>
       </article>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["id"],
+  data() {
+    return {
+      recipe: null,
+    };
+  },
+  methods: {
+    loadRecipe(id) {
+      const allDishes = this.$store.getters["dish/getDishes"];
+      const r = allDishes.filter((d) => d.id == id);
+      this.recipe = r[0];
+      console.log(this.recipe);
+    },
+  },
+  created() {
+    this.loadRecipe(this.id);
+  },
+};
 </script>
 
 <style scoped>

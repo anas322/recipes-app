@@ -10,7 +10,7 @@ const routes = [
 
   { path: "/dishes", component: LandView },
 
-  { path: "/dishes/:id", component: DishDetails },
+  { path: "/dishes/:id", component: DishDetails, props: true },
 
   { path: "/addDish", component: DishForm },
 ];

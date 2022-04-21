@@ -1,14 +1,10 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+
+import DishMoudule from "./dish";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
-  }
-})
+    dish: DishMoudule,
+  },
+  state: {},
+});

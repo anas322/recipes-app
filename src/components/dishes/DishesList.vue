@@ -2,21 +2,23 @@
   <section id="dishes">
     <h1><strong>Dishes List </strong></h1>
     <div class="container">
-      <article v-for="n in 9" :key="n">
+      <article v-for="d in dishes" :key="d.id">
         <header>
+          <router-link :to="`/dishes/${d.id}`">
+            <img
+              src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-right-arrow-arrows-kmg-design-flat-kmg-design.png"
+              class="details-arrow"
+            />
+          </router-link>
           <img src="../../assets/dish2.png" alt="food" style="width: 100%" />
         </header>
         <div class="body">
-          <h2>Post One</h2>
+          <h2>{{ d.name }}</h2>
           <p class="desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            voluptatibus officia fugiat nisi rerum quos delectus reprehenderit
-            sint suscipiti....
+            {{ d.desc }}
           </p>
           <ul>
-            <li>American</li>
-            <li>American</li>
-            <li>American</li>
+            <li>{{ d.cuisine }}</li>
           </ul>
         </div>
       </article>
@@ -25,7 +27,28 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    dishes() {
+      return this.$store.getters["dish/getDishes"];
+    },
+  },
+  methods: {
+    async loadDishes() {
+      try {
+        await this.$store.dispatch("dish/loadDishes");
+      } catch (error) {
+        console.log(error.message);
+      }
+    },
+  },
+  created() {
+    this.loadDishes();
+  },
+};
 </script>
 
 <style scoped>
@@ -61,6 +84,7 @@ strong::after {
 }
 article {
   flex: calc(30% - 4rem);
+  flex-grow: 0;
   background: var(--light-purple);
   box-shadow: 8px 11px 22px 4px #bebebe;
   border-radius: 14px;
@@ -68,9 +92,13 @@ article {
 }
 article:hover {
   transform: scale(1.06);
-  cursor: pointer;
 }
 
+.details-arrow {
+  float: right;
+  padding: 10px 15px;
+  cursor: pointer;
+}
 .body {
   padding: 1.5rem;
   color: #222;
