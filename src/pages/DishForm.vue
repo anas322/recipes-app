@@ -90,6 +90,7 @@ export default {
         };
 
         this.$store.dispatch("dish/setDish", payload);
+        this.$router.replace("/dishes");
       }
     },
   },
@@ -138,6 +139,7 @@ input[type="submit"] {
   float: right;
   color: #fff;
   background: var(--dark-yellow);
+  cursor: pointer;
 }
 
 /* error message  */

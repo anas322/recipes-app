@@ -1,7 +1,7 @@
 export default {
   async setDish(context, payload) {
     const response = await fetch(
-      "https://recipe-app-8f9c1-default-rtdb.firebaseio.com/dishes.json",
+      "https://recipe-32c9b-default-rtdb.firebaseio.com/dishes.json",
       {
         method: "POST",
         body: JSON.stringify(payload),
@@ -27,7 +27,7 @@ export default {
 
   async loadDishes(context) {
     const response = await fetch(
-      "https://recipe-app-8f9c1-default-rtdb.firebaseio.com/dishes.json"
+      "https://recipe-32c9b-default-rtdb.firebaseio.com/dishes.json"
     );
 
     const responseData = await response.json();
