@@ -11,3 +11,9 @@ To start this project run
 ```bash
   npm run serve
 ```
+
+## Project overview
+
+![Dishes Pic](dishes.png)
+![Dishes Pic](dishe.png)
+![Dishes Pic](form.png)
