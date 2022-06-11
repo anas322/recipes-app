@@ -15,5 +15,5 @@ To start this project run
 ## Project overview
 
 ![Dishes Pic](dishes.png)
-![Dishes Pic](dishe.png)
+![Dishes Pic](dish.png)
 ![Dishes Pic](form.png)
